@@ -41,7 +41,7 @@ export default function Modal({ isOpen, onClose, title, children, type = "info" 
     };
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
             <div className="bg-white rounded-lg shadow-xl w-80 max-w-sm mx-4">
                 <div className="p-6 text-center">
                     {getIcon()}
