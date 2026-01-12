@@ -1,0 +1,54 @@
+{
+  "Header": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About us",
+    "contact": "Contact us"
+  },
+  "Hero": {
+    "hero-text": "specializes in supplying chemicals and packaging solutions for manufacturers. Since 2017, we have been committed to delivering high-quality raw materials and tailored export services, supporting industries with professionalism and expertise. By staying dedicated to our core areas of operation, we build long-term partnerships and provide innovative solutions that meet the evolving needs of our clients."
+  },
+  "Products": {
+    "in-stock": "In stock products",
+    "on-demand": "On-demand products"
+  },
+  "Partners": {
+    "partners": "Partners"
+  },
+  "Footer": {
+    "footer-text": "Senagat Trade is a business specializing in the supply of raw materials and packaging products to manufacturing industries. They position themselves as a reliable partner with a focus on building trust and long-term partnerships with clients.",
+    "quick-links": "Quick links",
+    "contacts": "Contacts",
+    "reserved": "All rights reserved"
+  },
+  "About": {
+    "title": "Senagat Trade – Your Trusted Partner in Raw Material Supply",
+    "text": "Established in 2017, Senagat Trade initially focused on supplying specialized packaging materials before expanding its portfolio to include diverse chemicals by 2019. A pivotal step in 2021 was the launch of stock sales from our Ashgabat warehouse, making us a key supplier of essential chemicals like Caustic Soda Flakes for the manufacturing sector. Today, we offer a comprehensive raw materials portfolio, emphasizing chemicals for household goods, complemented by tailored packaging solutions. Our future vision involves leveraging this expertise to venture into manufacturing with a new partner, aiming to launch our own products and solidify our position as a trusted, full-spectrum partner in the domestic and international supply chain.",
+    "sub-title": "Guiding Principles"
+  },
+  "Contacts": {
+    "title": "Contact us",
+    "text": "Feel free to contact us at any time. We'll get back to you as soon as possible!",
+    "name": "Name",
+    "surname": "Surname",
+    "mail": "Mail",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send"
+  },
+  "chat": {
+    "type-here": "Write a message...",
+    "modal-title": "Message sent",
+    "modal-text": "Your message has been sent successfully! We will respond during business hours.",
+    "okay": "Okay",
+    "not-working-time": "Not working time",
+    "not-working-time-text": "It's not working hours now",
+    "online-time": "We are online from 10:00 to 19:00 (UTC+5)",
+    "your-mail": "Your Email *",
+    "your-message": "Your message *",
+    "describe-question": "Describe your question...",
+    "sending": "Sending...",
+    "sent": "Send a message",
+    "note": "We will reply to you by email during business hours."
+  }
+}

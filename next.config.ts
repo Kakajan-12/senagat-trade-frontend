@@ -1,8 +1,29 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  reactCompiler: true,
+  // images: {
+  //     unoptimized: true,
+  //     remotePatterns: [
+  //         {
+  //             protocol: 'https',
+  //             hostname: 'api.oguzforum.com',
+  //             port: '',
+  //             pathname: '/uploads/**',
+  //         },
+  //     ],
+  // },
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        pathname: '/uploads/**'
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);
