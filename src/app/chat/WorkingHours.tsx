@@ -68,7 +68,7 @@ export default function WorkingHours({ onLeaveMessage }: WorkingHoursProps) {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-mainBlue text-white py-2 px-4 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="w-full main-bg-color text-white py-2 px-4 rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {isSubmitting ? `${t('sending')}` : `${t('sent')}`}
                 </button>

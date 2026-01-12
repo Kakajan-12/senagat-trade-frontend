@@ -49,7 +49,7 @@ export default function Modal({ isOpen, onClose, title, children, type = "info" 
                     <div className="text-gray-600 mb-6">{children}</div>
                     <button
                         onClick={onClose}
-                        className="px-6 py-2 bg-mainBlue text-white rounded-md hover:bg-blue-600 transition-colors"
+                        className="px-6 py-2 main-bg-color text-white rounded-md hover:bg-blue-600 transition-colors"
                     >
                         {t('okay')}
                     </button>
