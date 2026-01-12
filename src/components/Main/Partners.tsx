@@ -56,7 +56,7 @@ export default function Partners() {
                                         src={`${process.env.NEXT_PUBLIC_API_URL}/${partner.logo.replace(/\\/g, "/")}`}
                                         alt={`partner-${partner.id}`}
                                         width={200}
-                                        height={200}
+                                        height={80}
                                         style={{ objectFit: "contain" }}
                                     />
                                 </div>
