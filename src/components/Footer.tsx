@@ -34,9 +34,9 @@ export default function Footer() {
     const t = useTranslations('Footer');
     const h = useTranslations('Header');
     const locale = useLocale();
-    const [address, setAddress] = useState<Address | null>(null);
-    const [mail, setMail] = useState<Mail | null>(null);
-    const [phone, setPhone] = useState<Phone | null>(null);
+    const [addresses, setAddresses] = useState<Address[]>([]);
+    const [mails, setMails] = useState<Mail[]>([]);
+    const [phones, setPhones] = useState<Phone[]>([]);
     const [links, setLinks] = useState<LinkItem[]>([]);
 
     useEffect(() => {
@@ -56,9 +56,9 @@ export default function Footer() {
                     linksRes.json()
                 ]);
 
-                setAddress(addressData[0] || null);
-                setMail(mailData[0] || null);
-                setPhone(phoneData[0] || null);
+                setAddresses(addressData || []);
+                setMails(mailData || []);
+                setPhones(phoneData || []);
                 setLinks(linksData || []);
             } catch (err) {
                 console.error('Ошибка загрузки данных для Footer:', err);
@@ -117,29 +117,29 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        {/* Contacts */}
                         <div>
                             <p className="font-medium text-white mb-4">{t('contacts')}</p>
                             <div className="flex flex-col space-y-4">
-                                {address && (
-                                    <div className="flex items-center space-x-2">
+                                {addresses.map((address) => (
+                                    <div key={address.id} className="flex items-center space-x-2">
                                         <IoLocationOutline className="text-white" size={20} />
-                                        <p className="text-white">{locale === 'ru' ? address.address_ru : address.address_en}
+                                        <p className="text-white">
+                                            {locale === 'ru' ? address.address_ru : address.address_en}
                                         </p>
                                     </div>
-                                )}
-                                {phone && (
-                                    <div className="flex items-center space-x-2">
+                                ))}
+                                {phones.map((phone) => (
+                                    <div key={phone.id} className="flex items-center space-x-2">
                                         <FiPhone className="text-white" size={20} />
                                         <p className="text-white">{phone.phone}</p>
                                     </div>
-                                )}
-                                {mail && (
-                                    <div className="flex items-center space-x-2">
+                                ))}
+                                {mails.map((mail) => (
+                                    <div key={mail.id} className="flex items-center space-x-2">
                                         <IoMailOutline className="text-white" size={20} />
                                         <p className="text-white">{mail.mail}</p>
                                     </div>
-                                )}
+                                ))}
                             </div>
                         </div>
                     </div>
