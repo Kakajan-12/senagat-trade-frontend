@@ -14,8 +14,8 @@ interface ModalProps {
 }
 
 export default function Modal({ isOpen, onClose, title, children, type = "info" }: ModalProps) {
-    if (!isOpen) return null;
     const t = useTranslations('chat')
+    if (!isOpen) return null;
 
     const getIcon = () => {
         switch (type) {
