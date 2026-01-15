@@ -18,13 +18,20 @@ export default function Header() {
         { id: 4, title: t('contact'), link: '/contacts' }
     ];
 
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+    };
+
+    const handleLinkClick = () => {
+        closeMenu();
+    };
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
         };
 
         window.addEventListener('scroll', handleScroll);
-        // Вызываем сразу для начального состояния
         handleScroll();
 
         return () => {
@@ -40,7 +47,7 @@ export default function Header() {
                 buttonRef.current &&
                 !buttonRef.current.contains(event.target as Node)
             ) {
-                setIsMenuOpen(false);
+                closeMenu();
             }
         };
 
@@ -49,7 +56,6 @@ export default function Header() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
-
 
     return (
         <div className={`w-full fixed z-60 transition-all duration-300 ${
@@ -83,7 +89,7 @@ export default function Header() {
                     isScrolled || isMenuOpen ? 'main-bg-color' : 'bg-transparent'
                 } `}>
                     <div className="flex justify-between items-center py-4">
-                        <Link href={`/`}>
+                        <Link href={`/`} onClick={closeMenu}>
                             <Image
                                 src="/header-logo.svg"
                                 width={120}
@@ -124,6 +130,7 @@ export default function Header() {
                                             <Link
                                                 href={item.link}
                                                 className="text-white hover:text-gray-200 transition-colors duration-200"
+                                                onClick={handleLinkClick}
                                             >
                                                 {item.title}
                                             </Link>

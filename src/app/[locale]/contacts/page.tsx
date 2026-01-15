@@ -132,7 +132,6 @@ export default function Contacts() {
 
     return (
         <div className="my-container main-bg-color mx-auto bg-[url('/bg-logo.svg')] bg-no-repeat py-24">
-            {/* Toast container */}
             <Toaster position="top-right" reverseOrder={false} />
 
             <div className="container mx-auto px-4">
@@ -143,7 +142,6 @@ export default function Contacts() {
                     </div>
                     <div className="lg:w-1/2">
                         <form action="#" className="space-y-6" onSubmit={handleSubmit}>
-                            {/* Floating inputs */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <FloatingInput
                                     label={t('name')}
@@ -186,7 +184,6 @@ export default function Contacts() {
                                     isFocused={focusedField === 'phone'}
                                 />
                             </div>
-                            {/* Message */}
                             <div className="relative mt-8">
                                 <textarea
                                     name="message"
@@ -209,17 +206,16 @@ export default function Contacts() {
                                     {t('message')}
                                 </label>
                             </div>
-                            {/* CAPTCHA and submit */}
-                            <div className="flex items-center mt-8 space-x-6">
-                                <div className="flex items-center gap-2">
+                            <div className="flex flex-col sm:flex-row items-center mt-8 gap-4 space-x-6">
+                                <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 m-0">
                                     <div dangerouslySetInnerHTML={{__html: captchaImage}}/>
-                                    <button
-                                        type="button"
-                                        onClick={loadCaptcha}
-                                        className="text-sm text-white underline cursor-pointer"
-                                    >
-                                        Refresh
-                                    </button>
+                                    {/*<button*/}
+                                    {/*    type="button"*/}
+                                    {/*    onClick={loadCaptcha}*/}
+                                    {/*    className="text-sm text-white underline cursor-pointer"*/}
+                                    {/*>*/}
+                                    {/*    Refresh*/}
+                                    {/*</button>*/}
                                     <input
                                         name="captchaText"
                                         value={formData.captchaText}
@@ -234,7 +230,7 @@ export default function Contacts() {
                                     disabled={sending}
                                     className="px-8 py-3 bg-white text-white rounded-lg
                                         transition-colors duration-300 text-color
-                                        font-medium w-full sm:w-fit cursor-pointer"
+                                        font-medium w-full cursor-pointer"
                                 >
                                     {sending ? 'Sending...' : t('send')}
                                 </button>
